@@ -1,0 +1,72 @@
+@charset "UTF-8"
+@import "_sass/fonts"
+
+*
+    margin: 0
+
+body
+    height: 100vh
+    background: linear-gradient(black, #00092b)
+    font-family: $font
+    overflow: hidden !important
+
+//! logo
+
+.logo
+    width: 100vw
+    padding-top: 25px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        width: 75px
+        height: 75px
+    h1
+        margin-left: 10px
+        color: white
+
+//! @media: logo (mobile)
+
+@media (max-width:767px)
+    .logo
+        img
+          width: 50px
+          height: 50px
+        h1
+          font-size: 22px
+
+//! error
+
+.error
+    margin-top: 100px
+    width: 100vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    h3
+        font-size: 28px
+        color: white
+    span
+        font-size: 18px
+        color: white
+    h3, span
+        text-align: center
+    button
+        margin-top: 25px
+        background: none
+        border: 3px solid white
+        border-radius: 5px
+        padding: 5px 12px
+        font-family: $font !important
+        font-size: 18px
+        color: white
+        cursor: pointer
+        i
+            margin-left: 10px
+
+//! @media: error (mobile)
+
+@media (max-width:767px)
+    .error
+        span
+          font-size: 15px

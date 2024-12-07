@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+Allow: /w/
+Sitemap: file:///C:/xampp/htdocs/www/Space%20Sites%E2%84%A2/sitemap.xml

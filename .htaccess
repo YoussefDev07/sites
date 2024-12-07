@@ -1,0 +1,27 @@
+AddDefaultCharset utf-8
+
+# diractions
+
+Options -Indexes
+
+# Gzip
+
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/css text/xml text/plain application/javascript font/ttf font/woff2 image/png image/webp
+</ifmodule>
+
+# index
+
+DirectoryIndex index.php
+
+# errors
+
+ErrorDocument 400 file:///C:/xampp/htdocs/www/Space%20Sites™/error/400.htm
+ErrorDocument 403 file:///C:/xampp/htdocs/www/Space%20Sites™/error/403.htm
+ErrorDocument 404 file:///C:/xampp/htdocs/www/Space%20Sites™/error/404.htm
+ErrorDocument 408 file:///C:/xampp/htdocs/www/Space%20Sites™/error/408.htm
+ErrorDocument 414 file:///C:/xampp/htdocs/www/Space%20Sites™/error/414.htm
+ErrorDocument 500 file:///C:/xampp/htdocs/www/Space%20Sites™/error/500.htm
+ErrorDocument 502 file:///C:/xampp/htdocs/www/Space%20Sites™/error/502.htm
+ErrorDocument 503 file:///C:/xampp/htdocs/www/Space%20Sites™/error/503.htm
+ErrorDocument 504 file:///C:/xampp/htdocs/www/Space%20Sites™/error/504.htm

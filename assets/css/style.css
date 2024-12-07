@@ -1,0 +1,686 @@
+@charset "UTF-8";
+@import url("./fonts.css");
+
+*{
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: linear-gradient(black, #00092b);
+  font-family: var(--font);
+  overflow-x: hidden !important;
+}
+
+/*:variables*/
+
+:root {
+  --font: "Lemonada";
+  --main: #00186d;
+}
+
+/*::-scrollbar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main);
+}
+
+/*::selection*/
+
+::selection {
+  background-color: var(--main);
+}
+
+img::selection {
+  background: none;
+}
+
+/*directions*/
+
+.directions {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+}
+
+.directions button, .header button {
+  width: 50%;
+  height: 50px;
+  background: none;
+  border: 3px solid white;
+  border-radius: 12px;
+  font-size: 25px;
+  color: white;
+  transition: 800ms;
+  cursor: pointer;
+}
+
+.directions button:hover, .header button:hover {
+  background: linear-gradient(black, #00092b, var(--main));
+}
+
+.directions button > i, .header button > i {
+  margin-left: 10px;
+}
+
+.directions .theline {
+  margin: 14px 0;
+  width: 48%;
+  height: 1px;
+  background-color: white;
+  opacity: 25%;
+}
+
+/*@media: directions*/
+
+@media (max-width:1023px) {
+  .directions button, .header button {
+   transition: 0 !important;
+  }
+}
+
+/*@media: directions (mobile)*/
+
+@media (max-width:767px) {
+  .directions .theline {
+   width: 45%;
+  }
+}
+
+/*header*/
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.header div {
+  margin-top: 12px;
+  direction: ltr;
+  display: flex;
+  align-items: center;
+}
+
+.header div.devices {
+  display: none;
+}
+
+.header img {
+  width: 75px;
+  height: 75px;
+}
+
+.header button {
+  width: 250px;
+  margin: 0 12px;
+}
+
+.header .line {
+  width: 1px;
+  height: 32px;
+  background-color: white;
+  opacity: 25%;
+}
+
+/*@media: header*/
+
+@media (max-width:1023px) {
+  .header div.devices {
+   display: flex !important;
+  }
+  .header div.orignal {
+   display: none !important;
+  }
+}
+
+/*@media: header (mobile)*/
+
+@media (max-width:767px) {
+  .header img {
+   width: 58px;
+   height: 58px;
+  }
+  .header h1 {
+   font-size: 28px;
+  }
+  .header button {
+   width: auto;
+   height: auto;
+   margin: 0 18px;
+   padding: 5px 5px;
+   border: none;
+  }
+  .header button > i {
+   margin-left: 0;
+  }
+  .header .line {
+   height: 18px;
+  }
+}
+
+/*head*/
+
+.head {
+  width: 100%;
+  height: 150px;
+}
+
+/*@media: head (mobile)*/
+
+@media (max-width:767px) {
+  .head {
+   height: 118px;
+  }
+}
+
+/*search*/
+
+.search {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input {
+  width: 500px;
+  height: 45px;
+  padding: 0 5px;
+  background: none;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: var(--font);
+  font-size: 22px;
+  color: white;
+}
+
+.search button, .search a {
+  border: none;
+  background: none;
+  margin: 0 10px;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*@media: search (ipad)*/
+
+@media (min-width:768px) and (max-width:1023px) {
+  .search input {
+   width: 450px;
+  }
+}
+
+/*@media: search (mobile)*/
+
+@media (max-width:767px) {
+  .search {
+   margin-top: 50px;
+   flex-wrap: wrap;
+  }
+  .search input {
+   width: 80%;
+   font-size: 15px;
+  }
+  .search button, .search a {
+   margin: 0 22px;
+   margin-top: 25px;
+  }
+  .search button:nth-child(1) {
+   margin: 0
+  }
+}
+
+/*expired-invoices*/
+
+.expired-invoices {
+  margin-top: 50px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expired-invoices .invoices {
+  width: 100vw !important;
+}
+
+.expired-invoices summary {
+  border: 2px solid white;
+  padding: 5px 250px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/*@media: expired-invoices (ipad)*/
+
+@media (max-width:1023px) {
+  .expired-invoices summary {
+   padding: 6px 100px;
+   font-size: 14px;
+  }
+}
+
+/*@media: expired-invoices (mobile)*/
+
+@media (max-width:767px) {
+  .expired-invoices summary {
+   padding: 6px 15px;
+   font-size: 14px;
+  }
+}
+
+/*hr*/
+
+.hr {
+  width: 100vw;
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hr hr {
+  width: 90%;
+  opacity: 45%;
+}
+
+/*@media: hr*/
+
+@media (max-width:1023px) {
+  .hr {
+   margin: 50px 0;
+  }
+}
+
+/*invoices*/
+
+.invoices {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invoices table {
+  margin-top: 50px;
+  border: 1px solid white;
+}
+
+.invoices table:nth-child(1) {
+  margin-top: 0
+}
+
+.invoices table caption {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.invoices table caption pre {
+  font-family: var(--font);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.invoices table th, .invoices table td {
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.invoices table td[role="icon"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invoices table a {
+  text-decoration: none;
+  color: white;
+}
+
+.invoices table img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.invoices table i {
+  font-size: 28px;
+}
+
+.invoices button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.invoices button > i {
+  font-size: 18px;
+}
+
+.invoices div[role="media"] {
+  display: none;
+}
+
+/*@media: invoices*/
+
+@media (max-width:1023px) {
+  .invoices table {
+   display: none;
+  }
+  .invoices div[role="media"] {
+   width: 90%;
+   height: auto;
+   margin-top: 50px;
+   border: 3px double white;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-items: center;
+  }
+  .invoices div[role="media"]:nth-child(1) {
+   margin-top: 0
+  }
+  .invoices div[role="media"] h3 {
+   font-size: 18px;
+   color: white;
+  }
+  .invoices div[role="media"] div {
+   width: 100%;
+   padding-top: 10px;
+   display: grid;
+   grid-template-areas:
+    'customer-id customer-id'
+    'site-id site-id'
+    'price discount'
+    'currency pay-method'
+    'buy-files expire'
+    'renew hide';
+   gap: 10px;
+  }
+  .invoices div[role="media"] span {
+   border: 1px solid white;
+   padding: 8px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: white;
+  }
+  .invoices div[role="media"] strong {
+   font-size: 12px;
+  }
+  .invoices div[role="media"] a {
+    text-decoration: none;
+   font-size: 10px;
+   color: white;
+  }
+  .invoices div[role="media"] a[role="icon"] {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .invoices div[role="media"] img {
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   margin-left: 3px;
+  }
+  .invoices h6 {
+   margin-top: 10px;
+   font-size: 10px;
+   font-weight: normal;
+   color: white;
+  }
+}
+
+/*add*/
+
+.add {
+  width: 95vw;
+  display: grid;
+  justify-items: center;
+  gap: 25px;
+  position: absolute;
+  top: 55%;
+  right: 50%;
+  transform: translate(50%, -45%);
+}
+
+.add div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.add input[type="text"], .add input[type="number"], select {
+  height: 45px;
+  background: none;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-family: var(--font);
+  font-size: 15px;
+}
+
+.add input[type="number"]::-webkit-inner-spin-button, .add input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+.add select {
+  background-color: black;
+  cursor: pointer;
+}
+
+.add span {
+  display: flex;
+  align-items: center;
+}
+
+.add input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.add label {
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.add input[type="submit"] {
+  width: 100%;
+  height: 45px;
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: var(--font);
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.add input[type="submit"]:hover {
+  background: linear-gradient(black, #00092b, var(--main));
+}
+
+/*@media: add (mobile)*/
+
+@media (max-width:767px) {
+  .add {
+   margin-top: 50px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   padding-bottom: 25px;
+  }
+  .add div {
+   display: flex;
+   flex-direction: column;
+   transform: none;
+  }
+  .add input[type="submit"] {
+   margin-top: 75px;
+  }
+}
+
+/*files*/
+
+.files {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*upload*/
+
+.upload {
+  width: 90%;
+}
+
+.upload button {
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-left: 25px;
+  font-family: var(--font);
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.upload button:nth-child(1) {
+  margin-left: 0
+}
+
+.upload button i {
+  margin-left: 10px;
+}
+
+/*@media: upload*/
+
+@media (max-width:1023px) {
+  .upload {
+   display: flex;
+   justify-content: center;
+  }
+  .upload span {
+   border-bottom: 2px solid rgba(255, 255, 255, 0.250);
+   padding: 5px 10px;
+   padding-bottom: 10px;
+  }
+}
+
+/*@media: upload (mobile)*/
+
+@media (max-width:767px) {
+  .upload button {
+   padding: 5px 10px;
+   font-size: 12px;
+  }
+}
+
+/*upload-files*/
+
+.upload-files {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-files input[type="file"] {
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-family: var(--font);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.upload-files input[type="submit"] {
+  width: 90%;
+  margin-top: 12px;
+  padding: 2px 5px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-family: var(--font);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/*files-list*/
+
+.files-list {
+  margin-top: 50px;
+  padding-bottom: 45px;
+  width: 90%;
+}
+
+.files-list li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-left: -10px;
+  color: white;
+}
+
+.files-list li[role="path"] {
+  opacity: .5;
+}
+
+.files-list li[role="folder"], .files-list li#backFolder {
+  cursor: pointer;
+}
+
+.files-list li i {
+  margin-right: 10px;
+}
+
+.files-list li i:nth-child(2) {
+  margin-left: 25px;
+  cursor: pointer
+}
+
+/*@media: files-list (mobile)*/
+
+@media (max-width:767px) {
+  .files-list li {
+   font-size: 12px;
+  }
+}

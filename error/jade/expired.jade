@@ -1,0 +1,53 @@
+doctype
+html(lang="ar", dir="rtl", type="text/html")
+  - const errorTITLE = "انتهت مدة الإشتراك بالخادم";
+  - const errorMESSAGE = "الرجاء توجه إلى سيرفر الديسكورد أدناه لتجديد الإشتراك";
+  head
+    //- meta
+    meta(charset="utf-8")/
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")/
+    meta(name="theme-color", content="#000000")/
+    meta(name="color-scheme", content="dark")/
+    meta(name="author", content="Youssef Dev")/
+    meta(name="owner", content="Youssef Over, AmerGAME69")/
+    meta(name="copyright", content="Space©")/
+    meta(name="google", content="notranslate")/
+    meta(name="robots", content="none")/
+    meta(name="description", content=errorTITLE)/
+    meta(name="twitter:card", content="summary")/
+    meta(name="twitter:url", content="http://localhost/www/Space%20Sites%e2%84%a2")/
+    meta(name="twitter:description", content=errorTITLE)/
+    meta(name="twitter:image", content="../assets/images/logo.png")/
+    meta(name="twitter:image:alt", content="logo")/
+    meta(name="twitter:creator", content="@YoussefDev7")/
+    meta(name="twitter:creator:id", content="1427454968232022016")/
+    meta(property="og:type", content="website")/
+    meta(property="og:url", content="http://localhost/www/Space%20Sites%e2%84%a2/")/
+    meta(property="og:description", content=errorTITLE)/
+    meta(property="og:image", content="../assets/images/logo.png")/
+    meta(property="og:image:alt", content="logo")/
+    meta(property="fb:admins", content="100093603992488")/
+    //- link
+    link(rel="canonical", href="/")/
+    link(rel="icon", type="image/png", href="../assets/images/logo.png")/
+    link(rel="stylesheet", type="text/css", href="./css/main.css")/
+    link(rel="stylesheet", media="all", href="../assets/libs/css/fontawesome.css")/
+    link(rel="stylesheet", href="../assets/libs/css/animate.css")/
+    //- title
+    title #{errorTITLE}
+    //- script
+    script(src="../assets/libs/js/wow.js")
+    script(type="application/javascript", src="./js/main.js", async=true)
+    noscript Please Enable JAVASCRIPT to Run The Site...
+  body
+    //- logo
+    .logo.wow.animate__fadeInDown(dir="ltr", data-wow-duration="800ms")
+      img(src="../assets/images/logo.png", alt="logo")
+      h1 SPACE Sites™
+    //- error
+    .error
+      h3.wow.animate__bounceIn(data-wow-duration="800ms") #{errorTITLE}
+      span.wow.animate__bounceIn(data-wow-duration="800ms") #{errorMESSAGE}
+      button#discord.wow.animate__fadeInUpBig(type="button", data-wow-duration="800ms")
+        i.fab.fa-discord
+        | سيرفر الديسكورد

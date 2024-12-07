@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ <url>
+  <loc>http://localhost/www/Space%20Sites%e2%84%a2/</loc>
+  <lastmod>2024-12-05</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.2</priority>
+ </url>
+ <url>
+  <loc>http://localhost/www/Space%20Sites%e2%84%a2/files.php?path=</loc>
+  <lastmod>2024-12-05</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>http://localhost/www/Space%20Sites%e2%84%a2/invoices.php</loc>
+  <lastmod>2024-12-05</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.8</priority>
+ </url>
+ <url>
+  <loc>http://localhost/www/Space%20Sites%e2%84%a2/add_invoice.php</loc>
+  <lastmod>2024-12-05</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>http://localhost/www/Space%20Sites%e2%84%a2/w/</loc>
+  <lastmod>2024-12-05</lastmod>
+  <changefreq>always</changefreq>
+  <priority>1.0</priority>
+ </url>
+</urlset>
